@@ -1,12 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-</head>
-<body>
-    <h1>Welcome to the Index Page</h1>
-    <p>This is the main entry point of the website.</p>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <title>Alejandro | Portfolio</title>
+    </head>
+    <body class="bg-[#282C33] text-[#ABB2BF] min-h-screen font-mono">
+        <header class="sticky top-0 bg-[#282C33] z-50">
+            <div
+                class="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center"
+            >
+                <div
+                    class="flex items-center gap-2 text-white font-bold text-xl"
+                >
+                    <span class="text-[#C778DD]">#</span>
+                    <h3>Alejandro</h3>
+                </div>
+
+                <nav>
+                    <ul class="flex space-x-8 text-sm md:text-base">
+                        <li
+                            ><a
+                                href="index.html"
+                                class="hover:text-white transition-colors"
+                                ><span class="text-[#C778DD]">#</span>home</a
+                            ></li
+                        >
+                        <li
+                            ><a
+                                href="projects.html"
+                                class="hover:text-white transition-colors"
+                                ><span class="text-[#C778DD]">#</span>works</a
+                            ></li
+                        >
+                        <li
+                            ><a
+                                href="about.html"
+                                class="hover:text-white transition-colors"
+                                ><span class="text-[#C778DD]">#</span
+                                >about-me</a
+                            ></li
+                        >
+                        <li
+                            ><a
+                                href="contact.html"
+                                class="hover:text-white transition-colors"
+                                ><span class="text-[#C778DD]">#</span
+                                >contacts</a
+                            ></li
+                        >
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="max-w-6xl mx-auto px-4">
+            <!-- Presentation -->
+            <section
+                class="flex flex-col md:flex-row items-center justify-between py-20 gap-12"
+            >
+                <div class="md:w-3/5 text-left">
+                    <h1 class="text-4xl font-semibold text-white mb-6">
+                        Alejandro is a
+                        <span class="text-[#C778DD]">full-stack developer</span>
+                    </h1>
+                    <p class="text-[#ABB2BF] text-lg mb-8 leading-relaxed">
+                        I enjoy working on projects that challenge me, improve
+                        my skills, and let me explore different areas of web
+                        development.
+                    </p>
+                    <a
+                        href="contact.html"
+                        class="inline-block border border-[#C778DD] text-white px-6 py-2 hover:bg-[#C778DD]/10 transition-all"
+                    >
+                        Contact me!!
+                    </a>
+                </div>
+
+                <div class="relative">
+                    <div
+                        class="absolute -top-4 -left-4 w-20 h-20 border-2 border-[#C778DD] z-0"
+                    ></div>
+                    <img
+                        src="../Media/user/profile.jpg"
+                        alt="Profile Picture"
+                        class="w-64 h-64 object-cover border-b-2 border-[#C778DD] relative z-10"
+                    />
+                </div>
+            </section>
+
+            <!-- Projects-->
+            <section class="py-16">
+                <div class="flex items-center gap-4 mb-12">
+                    <h2 class="text-3xl font-medium text-white">
+                        <span class="text-[#C778DD]">#</span>projects
+                    </h2>
+                    <div class="h-[1px] bg-[#C778DD] flex-grow max-w-md"></div>
+                    <a href="#" class="text-white hover:underline ml-auto"
+                        >View all ~~></a
+                    >
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="border border-[#ABB2BF] bg-[#282C33] group">
+                        <div class="overflow-hidden border-b border-[#ABB2BF]">
+                            <img
+                                src="tu-imagen.jpg"
+                                alt="ChertNodes"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+                            />
+                        </div>
+                        <div
+                            class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
+                        >
+                            HTML SCSS Python Flask
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-2xl font-medium text-white mb-2"
+                                >ChertNodes</h3
+                            >
+                            <p class="text-[#ABB2BF] text-sm mb-4"
+                                >Minecraft servers hosting</p
+                            >
+                            <div class="flex gap-4">
+                                <button
+                                    class="border border-[#C778DD] px-4 py-1 text-white text-sm hover:bg-[#C778DD]/20"
+                                    >Live &lt;~~&gt;</button
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills  -->
+            <section class="py-16">
+                <div class="flex items-center gap-4 mb-12">
+                    <h2 class="text-3xl font-medium text-white">
+                        <span class="text-[#C778DD]">#</span>skills
+                    </h2>
+                    <div class="h-[1px] bg-[#C778DD] flex-grow max-w-md"></div>
+                </div>
+
+                <div class="grid grid-cols-3 md:grid-cols-3 gap-8">
+                    <!-- Frontend-->
+                    <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mb-6">
+                        <div class="border border-[#ABB2BF] bg-[#282C33] group">
+                            <div
+                                class="col-start-1 col-end-3 p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
+                            >
+                                <h3 class="text-xl font-medium text-white"
+                                    >Frontend</h3
+                                >
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-2">
+                                <!-- Languages-->
+                                <div class="p-4">
+                                    <div class="col-start-1 col-end-2 gap-6">
+                                        <div
+                                            class="border border-[#ABB2BF] bg-[#282C33] group"
+                                        >
+                                            <div
+                                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
+                                            >
+                                                <h3
+                                                    class="text-xl font-medium text-white"
+                                                    >Languages</h3
+                                                >
+                                            </div>
+                                            <div class="p-4">
+                                                <p
+                                                    class="text-[#ABB2BF] text-sm mb-4"
+                                                    >JavaScript C#</p
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Frameworks -->
+                                <div class="p-4">
+                                    <div class="col-start-3 col-end-4 gap-6">
+                                        <div
+                                            class="border border-[#ABB2BF] bg-[#282C33] group"
+                                        >
+                                            <div
+                                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
+                                            >
+                                                <h3
+                                                    class="text-xl font-medium text-white"
+                                                    >Frameworks</h3
+                                                >
+                                            </div>
+                                            <div class="p-4">
+                                                <p
+                                                    class="text-[#ABB2BF] text-sm mb-4"
+                                                    >Tailwind-CSS</p
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mb-8">
+                        <div class="border border-[#ABB2BF] bg-[#282C33] group">
+                            <div
+                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
+                            >
+                                <h3 class="text-xl font-medium text-white"
+                                    >Backend</h3
+                                >
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-2">
+                                <!-- Languages-->
+                                <div class="p-4">
+                                    <div class="col-start-1 col-end-2 gap-6">
+                                        <div
+                                            class="border border-[#ABB2BF] bg-[#282C33] group"
+                                        >
+                                            <div
+                                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
+                                            >
+                                                <h3
+                                                    class="text-xl font-medium text-white"
+                                                    >Languages</h3
+                                                >
+                                            </div>
+                                            <div class="p-4">
+                                                <p
+                                                    class="text-[#ABB2BF] text-sm mb-4"
+                                                    >JavaScript PHP C#</p
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Frameworks -->
+                                <div class="p-4">
+                                    <div class="col-start-3 col-end-4 gap-6">
+                                        <div
+                                            class="border border-[#ABB2BF] bg-[#282C33] group"
+                                        >
+                                            <div
+                                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
+                                            >
+                                                <h3
+                                                    class="text-xl font-medium text-white"
+                                                    >Frameworks</h3
+                                                >
+                                            </div>
+                                            <div class="p-4">
+                                                <p
+                                                    class="text-[#ABB2BF] text-sm mb-4"
+                                                    >EF-Core ASP.NET Laravel</p
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Databases -->
+                                <div class="p-4">
+                                    <div class="col-start-1 col-end-2 gap-6">
+                                        <div
+                                            class="border border-[#ABB2BF] bg-[#282C33] group"
+                                        >
+                                            <div
+                                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
+                                            >
+                                                <h3
+                                                    class="text-xl font-medium text-white"
+                                                    >Databases</h3
+                                                >
+                                            </div>
+                                            <div class="p-4">
+                                                <p
+                                                    class="text-[#ABB2BF] text-sm mb-4"
+                                                    >MySQL SqlServer</p
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Others-->
+                    <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mb-6">
+                        <div class="border border-[#ABB2BF] bg-[#282C33] group">
+                            <div
+                                class="col-start-1 col-end-3 p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
+                            >
+                                <h3 class="text-xl font-medium text-white"
+                                    >Others</h3
+                                >
+                            </div>
+                            <div class="grid grid-cols-2 md:grid-cols-2">
+                                <!-- Technologys -->
+                                <div class="p-4">
+                                    <div class="col-start-1 col-end-2 gap-6">
+                                        <div
+                                            class="border border-[#ABB2BF] bg-[#282C33] group"
+                                        >
+                                            <div
+                                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
+                                            >
+                                                <h3
+                                                    class="text-xl font-medium text-white"
+                                                    >Technologys</h3
+                                                >
+                                            </div>
+                                            <div class="p-4">
+                                                <p
+                                                    class="text-[#ABB2BF] text-sm mb-4"
+                                                    >Markdown Git Trello Notion
+                                                    Figma Notion</p
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- IDS -->
+                                <div class="p-4">
+                                    <div class="col-start-3 col-end-4 gap-6">
+                                        <div
+                                            class="border border-[#ABB2BF] bg-[#282C33] group"
+                                        >
+                                            <div
+                                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
+                                            >
+                                                <h3
+                                                    class="text-xl font-medium text-white"
+                                                    >IDE</h3
+                                                >
+                                            </div>
+                                            <div class="p-4">
+                                                <p
+                                                    class="text-[#ABB2BF] text-sm mb-4"
+                                                    >VSCode VStudio
+                                                    SublimeText</p
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
