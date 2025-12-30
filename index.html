@@ -4,6 +4,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="Media/suitcase-solid-full.svg"
+        />
+
         <title>Alejandro | Portfolio</title>
     </head>
     <body class="bg-[#282C33] text-[#ABB2BF] min-h-screen font-mono">
@@ -18,26 +25,27 @@
                     <h3>Alejandro</h3>
                 </div>
 
-                <nav>
-                    <ul class="flex space-x-8 text-sm md:text-base">
+                <nav class="hidden md:flex">
+                    <ul class="flex space-x-8">
                         <li
                             ><a
                                 href="index.html"
-                                class="hover:text-white transition-colors"
+                                class="hover:text-white transition-colors text-gray-400"
                                 ><span class="text-[#C778DD]">#</span>home</a
                             ></li
                         >
                         <li
                             ><a
-                                href="projects.html"
-                                class="hover:text-white transition-colors"
-                                ><span class="text-[#C778DD]">#</span>works</a
+                                href="Html/projects.html"
+                                class="hover:text-white transition-colors text-gray-400"
+                                ><span class="text-[#C778DD]">#</span
+                                >projects</a
                             ></li
                         >
                         <li
                             ><a
                                 href="about.html"
-                                class="hover:text-white transition-colors"
+                                class="hover:text-white transition-colors text-gray-400"
                                 ><span class="text-[#C778DD]">#</span
                                 >about-me</a
                             ></li
@@ -45,13 +53,60 @@
                         <li
                             ><a
                                 href="contact.html"
-                                class="hover:text-white transition-colors"
+                                class="hover:text-white transition-colors text-gray-400"
                                 ><span class="text-[#C778DD]">#</span
                                 >contacts</a
                             ></li
                         >
                     </ul>
                 </nav>
+
+                <button
+                    id="menu-btn"
+                    class="text-white focus:outline-none md:hidden z-60"
+                >
+                    <svg
+                        id="menu-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-8 w-8"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M12 12h8M4 18h16"
+                        />
+                    </svg>
+                </button>
+            </div>
+
+            <div
+                id="mobile-menu"
+                class="fixed inset-0 bg-[#282C33] flex flex-col p-8 transition-transform transform translate-x-full md:hidden"
+            >
+                <div class="mt-16 flex flex-col gap-8 text-3xl">
+                    <a href="/index.html" class="text-gray-400"
+                        ><span class="text-[#C778DD]">#</span>home</a
+                    >
+                    <a href="/Html/projects.html" class="text-gray-400"
+                        ><span class="text-[#C778DD]">#</span>projects</a
+                    >
+                    <a href="about.html" class="text-gray-400"
+                        ><span class="text-[#C778DD]">#</span>about-me</a
+                    >
+                    <a href="contact.html" class="text-gray-400"
+                        ><span class="text-[#C778DD]">#</span>contacts</a
+                    >
+
+                    <div
+                        class="mt-4 text-xl text-gray-400 border-t border-gray-700 pt-4"
+                    >
+                        <span>EN ⌄</span>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -97,12 +152,69 @@
                         <span class="text-[#C778DD]">#</span>projects
                     </h2>
                     <div class="h-[1px] bg-[#C778DD] flex-grow max-w-md"></div>
-                    <a href="#" class="text-white hover:underline ml-auto"
+                    <a href="/Html/projects.html" class="text-white hover:underline ml-auto"
                         >View all ~~></a
                     >
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Project Cards -->
+                <div class="grid md:grid-cols-3  gap-6">
+                    <div class="border border-[#ABB2BF] bg-[#282C33] group">
+                        <div class="overflow-hidden border-b border-[#ABB2BF]">
+                            <img
+                                src="tu-imagen.jpg"
+                                alt="ChertNodes"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+                            />
+                        </div>
+                        <div
+                            class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
+                        >
+                            HTML SCSS Python Flask
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-2xl font-medium text-white mb-2"
+                                >ChertNodes</h3
+                            >
+                            <p class="text-[#ABB2BF] text-sm mb-4"
+                                >Minecraft servers hosting</p
+                            >
+                            <div class="flex gap-4">
+                                <button
+                                    class="border border-[#C778DD] px-4 py-1 text-white text-sm hover:bg-[#C778DD]/20"
+                                    >Live &lt;~~&gt;</button
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border border-[#ABB2BF] bg-[#282C33] group">
+                        <div class="overflow-hidden border-b border-[#ABB2BF]">
+                            <img
+                                src="tu-imagen.jpg"
+                                alt="ChertNodes"
+                                class="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+                            />
+                        </div>
+                        <div
+                            class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
+                        >
+                            HTML SCSS Python Flask
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-2xl font-medium text-white mb-2"
+                                >ChertNodes</h3
+                            >
+                            <p class="text-[#ABB2BF] text-sm mb-4"
+                                >Minecraft servers hosting</p
+                            >
+                            <div class="flex gap-4">
+                                <button
+                                    class="border border-[#C778DD] px-4 py-1 text-white text-sm hover:bg-[#C778DD]/20"
+                                    >Live &lt;~~&gt;</button
+                                >
+                            </div>
+                        </div>
+                    </div>
                     <div class="border border-[#ABB2BF] bg-[#282C33] group">
                         <div class="overflow-hidden border-b border-[#ABB2BF]">
                             <img
@@ -143,12 +255,13 @@
                     <div class="h-[1px] bg-[#C778DD] flex-grow max-w-md"></div>
                 </div>
 
-                <div class="grid grid-cols-3 md:grid-cols-3 gap-8">
+                <!-- Skills Cards -->
+                <div class="grid md:grid-cols-3 gap-6">
                     <!-- Frontend-->
                     <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mb-6">
                         <div class="border border-[#ABB2BF] bg-[#282C33] group">
                             <div
-                                class="col-start-1 col-end-3 p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
+                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
                             >
                                 <h3 class="text-xl font-medium text-white"
                                     >Frontend</h3
@@ -157,7 +270,7 @@
                             <div class="grid grid-cols-2 md:grid-cols-2">
                                 <!-- Languages-->
                                 <div class="p-4">
-                                    <div class="col-start-1 col-end-2 gap-6">
+                                    <div class="">
                                         <div
                                             class="border border-[#ABB2BF] bg-[#282C33] group"
                                         >
@@ -165,13 +278,13 @@
                                                 class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
                                             >
                                                 <h3
-                                                    class="text-xl font-medium text-white"
+                                                    class="text-xl font-medium sm:text-sm sm:font-bold text-white"
                                                     >Languages</h3
                                                 >
                                             </div>
                                             <div class="p-4">
                                                 <p
-                                                    class="text-[#ABB2BF] text-sm mb-4"
+                                                    class="text-[#ABB2BF] text-sm sm:text-xs mb-4"
                                                     >JavaScript C#</p
                                                 >
                                             </div>
@@ -189,7 +302,7 @@
                                                 class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
                                             >
                                                 <h3
-                                                    class="text-xl font-medium text-white"
+                                                    class="text-xl font-medium sm:text-sm sm:font-bold text-white"
                                                     >Frameworks</h3
                                                 >
                                             </div>
@@ -227,7 +340,7 @@
                                                 class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
                                             >
                                                 <h3
-                                                    class="text-xl font-medium text-white"
+                                                    class="text-xl font-medium sm:text-sm sm:font-bold text-white"
                                                     >Languages</h3
                                                 >
                                             </div>
@@ -251,7 +364,7 @@
                                                 class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
                                             >
                                                 <h3
-                                                    class="text-xl font-medium text-white"
+                                                    class="text-xl font-medium sm:text-sm sm:font-bold text-white"
                                                     >Frameworks</h3
                                                 >
                                             </div>
@@ -275,7 +388,7 @@
                                                 class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
                                             >
                                                 <h3
-                                                    class="text-xl font-medium text-white"
+                                                    class="text-xl font-medium sm:text-sm sm:font-bold text-white"
                                                     >Databases</h3
                                                 >
                                             </div>
@@ -313,7 +426,7 @@
                                                 class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
                                             >
                                                 <h3
-                                                    class="text-xl font-medium text-white"
+                                                    class="text-xl font-medium sm:text-sm sm:font-bold text-white"
                                                     >Technologys</h3
                                                 >
                                             </div>
@@ -338,7 +451,7 @@
                                                 class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
                                             >
                                                 <h3
-                                                    class="text-xl font-medium text-white"
+                                                    class="text-xl font-medium sm:text-sm sm:font-bold text-white"
                                                     >IDE</h3
                                                 >
                                             </div>
@@ -358,5 +471,8 @@
                 </div>
             </section>
         </main>
+
+        <!-- Script -->
+        <script src="Js/app.js"></script>
     </body>
 </html>
