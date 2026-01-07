@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="Media/suitcase-solid-full.svg"
+        />
+        <title>Alejandro | About-me</title>
+    </head>
+    <body class="bg-[#282C33] text-[#ABB2BF] min-h-screen font-mono">
+        <header
+            class="sticky top-0 bg-[#21252B] z-50 border-b border-[#ABB2BF]/20"
+        >
+            <div
+                class="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center"
+            >
+                <div
+                    class="flex items-center gap-2 text-white font-bold text-xl"
+                >
+                    <span class="text-[#C778DD]">#</span>
+                    <h3>Alejandro</h3>
+                </div>
+
+                <nav class="hidden md:flex">
+                    <ul class="flex space-x-8">
+                        <li
+                            ><a
+                                href="../index.html"
+                                class="hover:text-white transition-colors text-gray-400"
+                                ><span class="text-[#C778DD]">#</span>home</a
+                            ></li
+                        >
+                        <li
+                            ><a
+                                href="../Html/projects.html"
+                                class="hover:text-white transition-colors text-gray-400"
+                                ><span class="text-[#C778DD]">#</span
+                                >projects</a
+                            ></li
+                        >
+                        <li
+                            ><a
+                                href="../Html/aboutMe.html"
+                                class="hover:text-white transition-colors text-gray-400"
+                                ><span class="text-[#C778DD]">#</span
+                                >about-me</a
+                            ></li
+                        >
+                        <li
+                            ><a
+                                href="../Html/contactMe.html"
+                                class="hover:text-white transition-colors text-gray-400"
+                                ><span class="text-[#C778DD]">#</span
+                                >contacts</a
+                            ></li
+                        >
+                    </ul>
+                </nav>
+
+                <button
+                    id="menu-btn"
+                    class="text-white focus:outline-none md:hidden z-60"
+                >
+                    <svg
+                        id="menu-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-8 w-8"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M12 12h8M4 18h16"
+                        />
+                    </svg>
+                </button>
+            </div>
+
+            <div
+                id="mobile-menu"
+                class="fixed inset-0 bg-[#282C33] flex flex-col p-8 transition-transform transform translate-x-full md:hidden"
+            >
+                <div class="mt-16 flex flex-col gap-8 text-3xl">
+                    <a href="../index.html" class="text-gray-400"
+                        ><span class="text-[#C778DD]">#</span>home</a
+                    >
+                    <a href="../Html/projects.html" class="text-gray-400"
+                        ><span class="text-[#C778DD]">#</span>projects</a
+                    >
+                    <a href="../Html/aboutMe.html" class="text-gray-400"
+                        ><span class="text-[#C778DD]">#</span>about-me</a
+                    >
+                    <a href="../Html/contactMe.html" class="text-gray-400"
+                        ><span class="text-[#C778DD]">#</span>contacts</a
+                    >
+
+                    <div
+                        class="mt-4 text-xl text-gray-400 border-t border-gray-700 pt-4"
+                    >
+                        <span>EN ⌄</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main> </main>
+
+        <footer class="bg-[#21252B] py-10 mt-16 border-t border-[#ABB2BF]/20">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <div class="flex justify-center">
+                    <p class="text-[#ABB2BF] text-x">
+                        &copy; 2026 Alejandro. All rights reserved.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2">
+                    <div
+                        class="mt-6 flex flex-col gap-2 text-[12px] text-[#ABB2BF]/70"
+                    >
+                        <p>
+                            Diseño inspirado por:
+                            <a
+                                href="https://www.figma.com/design/n7THUkvDwGW8exnFrsNrEQ/Portfolio--Community-?node-id=1-2&t=i0FKVTu2AE7GE3XI-0"
+                                target="_blank"
+                                class="hover:text-white underline decoration-dotted"
+                            >
+                                Portfolio Design (Figma)
+                            </a>
+                        </p>
+                        <p>
+                            Iconos:
+                            <a
+                                href="https://www.flaticon.es/iconos-gratis/creencia"
+                                title="creencia iconos"
+                                class="hover:text-white underline"
+                            >
+                                Retinaicons - Flaticon
+                            </a>
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="text-xl">Media</h2>
+                        <div
+                            class="flex justify-center items-center gap-4 mt-4"
+                        >
+                            <a href="https://github.com/Marvel983"
+                                ><img
+                                    src="../Media/github.png"
+                                    alt="GitHub"
+                                    class="w-8 h-8 relative z-10"
+                            /></a>
+                            <a
+                                href="https://www.linkedin.com/in/alejandro-alvarenga-1a3ba4222/"
+                                ><img
+                                    src="../Media/linkedin.png"
+                                    alt="linkedin"
+                                    class="w-8 h-8 relative z-10"
+                            /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Script -->
+        <script src="../Js/app.js"></script>
+    </body>
+</html>
