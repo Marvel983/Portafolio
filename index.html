@@ -14,7 +14,9 @@
         <title>Alejandro | Portfolio</title>
     </head>
     <body class="bg-[#282C33] text-[#ABB2BF] min-h-screen font-mono">
-        <header class="sticky top-0 bg-[#21252B] z-50 border-b border-[#ABB2BF]/20">
+        <header
+            class="sticky top-0 bg-[#21252B] z-50 border-b border-[#ABB2BF]/20"
+        >
             <div
                 class="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center"
             >
@@ -125,12 +127,122 @@
                         my skills, and let me explore different areas of web
                         development
                     </p>
-                    <a
-                        href="contact.html"
-                        class="inline-block border border-[#C778DD] text-white px-6 py-2 hover:bg-[#C778DD]/10 transition-all"
+
+                    <!-- Modal toggle -->
+                    <button
+                        data-modal-target="crud-modal"
+                        data-modal-toggle="crud-modal"
+                        class="inline-block border border-[#C778DD] text-white px-6 py-2 hover:bg-[#C778DD]/10 transition-all font-medium"
+                        type="button"
+                        id="open-modal-btn"
                     >
                         Contact me!!
-                    </a>
+                    </button>
+
+                    <div
+                        id="crud-modal"
+                        tabindex="-1"
+                        aria-hidden="true"
+                        class="hidden overflow-y-auto overflow-x-hidden fixed mx-auto z-50 justify-center items-center w-full md:inset-0 h-full max-h-full bg-[#282C33]/80 backdrop-blur-sm"
+                    >
+                        <div class="relative p-4 w-full max-w-md max-h-full">
+                            <div
+                                class="relative bg-[#282C33] border border-[#ABB2BF] shadow-lg "
+                            >
+                                <div
+                                    class="flex items-center justify-between border-b border-[#ABB2BF] p-4"
+                                >
+                                    <h3 class="text-xl font-medium text-white">
+                                        <span class="text-[#C778DD]">#</span
+                                        >contact-me
+                                    </h3>
+                                    <button
+                                        type="button"
+                                        class="text-[#ABB2BF] bg-transparent hover:text-[#C778DD] transition-colors"
+                                        id="close-modal-img"
+                                    >
+                                        <svg
+                                            class="w-6 h-6"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M6 18L18 6M6 6l12 12"
+                                            />
+                                        </svg>
+                                        <span class="sr-only">Close modal</span>
+                                    </button>
+                                </div>
+
+                                <form action="#" class="p-6">
+                                    <div class="grid gap-6 mb-6">
+                                        <div>
+                                            <label
+                                                for="name"
+                                                class="block mb-2 text-sm font-medium text-[#C778DD]"
+                                                >Name</label
+                                            >
+                                            <input
+                                                type="text"
+                                                id="name"
+                                                class="bg-[#282C33] border border-[#ABB2BF] text-white text-sm focus:border-[#C778DD] outline-none block w-full p-2.5 transition-all"
+                                                placeholder="Your Name"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <label
+                                                for="email"
+                                                class="block mb-2 text-sm font-medium text-[#C778DD]"
+                                                >Email</label
+                                            >
+                                            <input
+                                                type="email"
+                                                id="email"
+                                                class="bg-[#282C33] border border-[#ABB2BF] text-white text-sm focus:border-[#C778DD] outline-none block w-full p-2.5 transition-all"
+                                                placeholder="email@example.com"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <label
+                                                for="description"
+                                                class="block mb-2 text-sm font-medium text-[#C778DD]"
+                                                >Message</label
+                                            >
+                                            <textarea
+                                                id="description"
+                                                rows="4"
+                                                class="bg-[#282C33] border border-[#ABB2BF] text-white text-sm focus:border-[#C778DD] outline-none block w-full p-2.5 transition-all"
+                                                placeholder="Write your message here..."
+                                            ></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-center gap-4">
+                                        <button
+                                            type="submit"
+                                            class="border border-[#C778DD] text-white px-4 py-2 hover:bg-[#C778DD]/10 transition-all text-sm font-medium"
+                                        >
+                                            Send Message
+                                        </button>
+                                        <button
+                                            data-modal-hide="crud-modal"
+                                            id="close-modal-btn"
+                                            type="button"
+                                            class="border border-[#ABB2BF] text-[#ABB2BF] px-4 py-2 hover:bg-[#ABB2BF]/10 transition-all text-sm font-medium"
+                                        >
+                                            Cancel
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="relative">
@@ -257,216 +369,87 @@
                     <div class="h-[1px] bg-[#C778DD] flex-grow max-w-md"></div>
                 </div>
 
-                <!-- Skills Cards -->
-                <div class="grid md:grid-cols-3 gap-6">
-                    <!-- Frontend-->
-                    <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mb-6">
-                        <div class="border border-[#ABB2BF] bg-[#282C33] group">
-                            <div
-                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
+                <div class="grid md:grid-cols-3 gap-6 items-start">
+                    <div class="border border-[#ABB2BF] bg-[#282C33]">
+                        <div class="p-2 border-b border-[#ABB2BF]">
+                            <h3 class="text-xl font-medium text-white"
+                                >Frontend</h3
                             >
-                                <h3 class="text-xl font-medium text-white"
-                                    >Frontend</h3
+                        </div>
+                        <div class="grid grid-cols-1">
+                            <div
+                                class="p-4 border-b border-[#ABB2BF] last:border-b-0"
+                            >
+                                <h4
+                                    class="text-[#ABB2BF] text-xs font-bold mb-2 uppercase"
+                                    >Languages</h4
                                 >
-                            </div>
-                            <div class="grid grid-cols-2 md:grid-cols-2">
-                                <!-- Languages-->
-                                <div class="p-4">
-                                    <div class="">
-                                        <div
-                                            class="border border-[#ABB2BF] bg-[#282C33] group"
-                                        >
-                                            <div
-                                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
-                                            >
-                                                <h3
-                                                    class="text-xl font-medium sm:text-sm sm:font-bold text-white"
-                                                    >Languages</h3
-                                                >
-                                            </div>
-                                            <div class="p-4">
-                                                <p
-                                                    class="text-[#ABB2BF] text-sm sm:text-xs mb-4"
-                                                    >JavaScript C#</p
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Frameworks -->
-                                <div class="p-4">
-                                    <div class="col-start-3 col-end-4 gap-6">
-                                        <div
-                                            class="border border-[#ABB2BF] bg-[#282C33] group"
-                                        >
-                                            <div
-                                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
-                                            >
-                                                <h3
-                                                    class="text-xl font-medium sm:text-sm sm:font-bold text-white"
-                                                    >Frameworks</h3
-                                                >
-                                            </div>
-                                            <div class="p-4">
-                                                <p
-                                                    class="text-[#ABB2BF] text-sm mb-4"
-                                                    >Tailwind-CSS</p
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p class="text-[#ABB2BF] text-sm"
+                                    >JavaScript HTML CSS SCSS</p
+                                >
                             </div>
                         </div>
                     </div>
 
-                    <!-- Backend -->
-                    <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mb-8">
-                        <div class="border border-[#ABB2BF] bg-[#282C33] group">
-                            <div
-                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
+                    <div class="border border-[#ABB2BF] bg-[#282C33]">
+                        <div class="p-2 border-b border-[#ABB2BF]">
+                            <h3 class="text-xl font-medium text-white"
+                                >Backend</h3
                             >
-                                <h3 class="text-xl font-medium text-white"
-                                    >Backend</h3
+                        </div>
+                        <div class="grid grid-cols-1">
+                            <div class="p-4 border-b border-[#ABB2BF]">
+                                <h4
+                                    class="text-[#ABB2BF] text-xs font-bold mb-2 uppercase"
+                                    >Languages</h4
+                                >
+                                <p class="text-[#ABB2BF] text-sm"
+                                    >PHP JavaScript</p
                                 >
                             </div>
-                            <div class="grid grid-cols-2 md:grid-cols-2">
-                                <!-- Languages-->
-                                <div class="p-4">
-                                    <div class="col-start-1 col-end-2 gap-6">
-                                        <div
-                                            class="border border-[#ABB2BF] bg-[#282C33] group"
-                                        >
-                                            <div
-                                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
-                                            >
-                                                <h3
-                                                    class="text-xl font-medium sm:text-sm sm:font-bold text-white"
-                                                    >Languages</h3
-                                                >
-                                            </div>
-                                            <div class="p-4">
-                                                <p
-                                                    class="text-[#ABB2BF] text-sm mb-4"
-                                                    >JavaScript PHP C#</p
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Frameworks -->
-                                <div class="p-4">
-                                    <div class="col-start-3 col-end-4 gap-6">
-                                        <div
-                                            class="border border-[#ABB2BF] bg-[#282C33] group"
-                                        >
-                                            <div
-                                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
-                                            >
-                                                <h3
-                                                    class="text-xl font-medium sm:text-sm sm:font-bold text-white"
-                                                    >Frameworks</h3
-                                                >
-                                            </div>
-                                            <div class="p-4">
-                                                <p
-                                                    class="text-[#ABB2BF] text-sm mb-4"
-                                                    >EF-Core ASP.NET Laravel</p
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Databases -->
-                                <div class="p-4">
-                                    <div class="col-start-1 col-end-2 gap-6">
-                                        <div
-                                            class="border border-[#ABB2BF] bg-[#282C33] group"
-                                        >
-                                            <div
-                                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
-                                            >
-                                                <h3
-                                                    class="text-xl font-medium sm:text-sm sm:font-bold text-white"
-                                                    >Databases</h3
-                                                >
-                                            </div>
-                                            <div class="p-4">
-                                                <p
-                                                    class="text-[#ABB2BF] text-sm mb-4"
-                                                    >MySQL SqlServer</p
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="p-4 border-b border-[#ABB2BF]">
+                                <h4
+                                    class="text-[#ABB2BF] text-xs font-bold mb-2 uppercase"
+                                    >Frameworks</h4
+                                >
+                                <p class="text-[#ABB2BF] text-sm"
+                                    >Laravel Vue
+                                </p>
+                            </div>
+                            <div class="p-4">
+                                <h4
+                                    class="text-[#ABB2BF] text-xs font-bold mb-2 uppercase"
+                                    >Databases</h4
+                                >
+                                <p class="text-[#ABB2BF] text-sm"
+                                    >SQLite MySQL SQLServer</p
+                                >
                             </div>
                         </div>
                     </div>
 
-                    <!-- Others-->
-                    <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mb-6">
-                        <div class="border border-[#ABB2BF] bg-[#282C33] group">
-                            <div
-                                class="col-start-1 col-end-3 p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
+                    <div class="border border-[#ABB2BF] bg-[#282C33]">
+                        <div class="p-2 border-b border-[#ABB2BF]">
+                            <h3 class="text-xl font-medium text-white"
+                                >Others</h3
                             >
-                                <h3 class="text-xl font-medium text-white"
-                                    >Others</h3
+                        </div>
+                        <div class="grid grid-cols-1">
+                            <div class="p-4 border-b border-[#ABB2BF]">
+                                <h4
+                                    class="text-[#ABB2BF] text-xs font-bold mb-2 uppercase"
+                                    >Technologies</h4
+                                >
+                                <p class="text-[#ABB2BF] text-sm"
+                                    >Git Figma Font-Awesome</p
                                 >
                             </div>
-                            <div class="grid grid-cols-2 md:grid-cols-2">
-                                <!-- Technologys -->
-                                <div class="p-4">
-                                    <div class="col-start-1 col-end-2 gap-6">
-                                        <div
-                                            class="border border-[#ABB2BF] bg-[#282C33] group"
-                                        >
-                                            <div
-                                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
-                                            >
-                                                <h3
-                                                    class="text-xl font-medium sm:text-sm sm:font-bold text-white"
-                                                    >Technologys</h3
-                                                >
-                                            </div>
-                                            <div class="p-4">
-                                                <p
-                                                    class="text-[#ABB2BF] text-sm mb-4"
-                                                    >Markdown Git Trello Notion
-                                                    Figma Notion</p
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- IDS -->
-                                <div class="p-4">
-                                    <div class="col-start-3 col-end-4 gap-6">
-                                        <div
-                                            class="border border-[#ABB2BF] bg-[#282C33] group"
-                                        >
-                                            <div
-                                                class="p-2 border-b border-[#ABB2BF] text-[#ABB2BF] text-xs"
-                                            >
-                                                <h3
-                                                    class="text-xl font-medium sm:text-sm sm:font-bold text-white"
-                                                    >IDE</h3
-                                                >
-                                            </div>
-                                            <div class="p-4">
-                                                <p
-                                                    class="text-[#ABB2BF] text-sm mb-4"
-                                                    >VSCode VStudio
-                                                    SublimeText</p
-                                                >
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="p-4">
+                                <h4
+                                    class="text-[#ABB2BF] text-xs font-bold mb-2 uppercase"
+                                    >Tools</h4
+                                >
+                                <p class="text-[#ABB2BF] text-sm">VSCode</p>
                             </div>
                         </div>
                     </div>

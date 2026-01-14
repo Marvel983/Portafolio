@@ -3,12 +3,12 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
         <link
             rel="icon"
             type="image/svg+xml"
-            href="Media/suitcase-solid-full.svg"
+            href="../Media/suitcase-solid-full.svg"
         />
         <title>Alejandro | About-me</title>
     </head>
@@ -110,7 +110,144 @@
                 </div>
             </div>
         </header>
-        <main> </main>
+        <main class="max-w-6xl mx-auto px-4">
+            <!-- Presentation -->
+            <section
+                class="flex flex-col md:flex-row items-center justify-between py-20 gap-12"
+            >
+                <div class="md:w-3/5 text-left">
+                    <h1 class="text-3xl font-semibold text-white mb-6">
+                        Hi there, I'm
+                        <span class="text-[#C778DD]"
+                            >Alejandro Alvarenga 👋</span
+                        >
+                    </h1>
+                    <p class="text-[#ABB2BF] text-lg mb-8 leading-relaxed">
+                        I'm a beginner developer passionate about learning new
+                        technologies and solving problems through code. I enjoy
+                        working on projects that challenge me, improve my
+                        skills, and let me explore different areas of web
+                        development. Currently, I am gaining experience in
+                        frameworks like Laravel and frontend tools like Tailwind
+                        CSS.
+                    </p>
+                    <p class="text-[#ABB2BF] text-lg mb-8 leading-relaxed">
+                        In my free time, I like to read tech blogs, watch
+                        tutorials, and experiment with new programming
+                        languages. I'm excited to continue growing as a
+                        developer and contribute to meaningful projects in the
+                        future.
+                    </p>
+                </div>
+
+                <div class="relative">
+                    <div
+                        class="absolute -top-4 -left-4 w-20 h-20 border-2 border-[#C778DD] z-0"
+                    ></div>
+                    <img
+                        src="../Media/user/profile.jpg"
+                        alt="Profile Picture"
+                        class="w-64 h-64 object-cover border-b-2 border-[#C778DD] relative z-10"
+                    />
+                </div>
+            </section>
+
+            <!-- Skills -->
+            <section class="py-16">
+                <div class="flex items-center gap-4 mb-12">
+                    <h2 class="text-3xl font-medium text-white">
+                        <span class="text-[#C778DD]">#</span>skills
+                    </h2>
+                    <div class="h-[1px] bg-[#C778DD] flex-grow max-w-md"></div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 items-start">
+                    <div class="border border-[#ABB2BF] bg-[#282C33]">
+                        <div class="p-2 border-b border-[#ABB2BF]">
+                            <h3 class="text-xl font-medium text-white"
+                                >Frontend</h3
+                            >
+                        </div>
+                        <div class="grid grid-cols-1">
+                            <div
+                                class="p-4 border-b border-[#ABB2BF] last:border-b-0"
+                            >
+                                <h4
+                                    class="text-[#ABB2BF] text-xs font-bold mb-2 uppercase"
+                                    >Languages</h4
+                                >
+                                <p class="text-[#ABB2BF] text-sm"
+                                    >JavaScript HTML CSS SCSS</p
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-[#ABB2BF] bg-[#282C33]">
+                        <div class="p-2 border-b border-[#ABB2BF]">
+                            <h3 class="text-xl font-medium text-white"
+                                >Backend</h3
+                            >
+                        </div>
+                        <div class="grid grid-cols-1">
+                            <div class="p-4 border-b border-[#ABB2BF]">
+                                <h4
+                                    class="text-[#ABB2BF] text-xs font-bold mb-2 uppercase"
+                                    >Languages</h4
+                                >
+                                <p class="text-[#ABB2BF] text-sm"
+                                    >PHP JavaScript</p
+                                >
+                            </div>
+                            <div class="p-4 border-b border-[#ABB2BF]">
+                                <h4
+                                    class="text-[#ABB2BF] text-xs font-bold mb-2 uppercase"
+                                    >Frameworks</h4
+                                >
+                                <p class="text-[#ABB2BF] text-sm"
+                                    >Laravel Vue
+                                </p>
+                            </div>
+                            <div class="p-4">
+                                <h4
+                                    class="text-[#ABB2BF] text-xs font-bold mb-2 uppercase"
+                                    >Databases</h4
+                                >
+                                <p class="text-[#ABB2BF] text-sm"
+                                    >SQLite MySQL SQLServer</p
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-[#ABB2BF] bg-[#282C33]">
+                        <div class="p-2 border-b border-[#ABB2BF]">
+                            <h3 class="text-xl font-medium text-white"
+                                >Others</h3
+                            >
+                        </div>
+                        <div class="grid grid-cols-1">
+                            <div class="p-4 border-b border-[#ABB2BF]">
+                                <h4
+                                    class="text-[#ABB2BF] text-xs font-bold mb-2 uppercase"
+                                    >Technologies</h4
+                                >
+                                <p class="text-[#ABB2BF] text-sm"
+                                    >Git Figma Font-Awesome</p
+                                >
+                            </div>
+                            <div class="p-4">
+                                <h4
+                                    class="text-[#ABB2BF] text-xs font-bold mb-2 uppercase"
+                                    >Tools</h4
+                                >
+                                <p class="text-[#ABB2BF] text-sm">VSCode</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
 
         <footer class="bg-[#21252B] py-10 mt-16 border-t border-[#ABB2BF]/20">
             <div class="max-w-6xl mx-auto px-4 text-center">

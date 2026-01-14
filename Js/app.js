@@ -15,6 +15,25 @@ menuBtn.addEventListener("click", () => {
     }
 });
 
+// Contact modal
+const openModalBtn = document.getElementById("open-modal-btn");
+const closeModalBtn = document.getElementById("close-modal-btn");
+const closeModalImg = document.getElementById("close-modal-img");
+const modal = document.getElementById("crud-modal");
+
+openModalBtn.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+});
+
+closeModalBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+});
+
+closeModalImg.addEventListener("click", () => {
+    modal.classList.add("hidden");
+});
+
+
 // Smooth Scrolling for Anchor Links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
